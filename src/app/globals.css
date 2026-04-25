@@ -61,6 +61,7 @@
 
 html {
   scroll-padding-top: 5rem;
+  font-size: 112.5%; /* Changes 1rem to 18px globally, scaling up entire site proportionate to standard Tailwind scale */
 }
 
 body {
