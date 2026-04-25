@@ -7,24 +7,28 @@ const scopeItems = [
     title: "Water Quality Monitoring",
     description:
       "pH, oxygen, ammonia, temperature—24/7 real-time monitoring with instant alerts.",
+    fileUrl: "/documents/water-quality-monitoring.pdf"
   },
   {
     icon: <Utensils size={40} />,
     title: "Automated Feed System",
     description:
       "AI-powered feeding reduces waste by up to 50% and optimises schedules for growth.",
+    fileUrl: "/documents/automated-feed-system.pdf"
   },
   {
     icon: <ShieldAlert size={40} />,
     title: "Disease Identifier",
     description:
       "Early AI detection of diseases and pathogens—95% accuracy before visible symptoms.",
+    fileUrl: "/documents/disease-identifier.pdf"
   },
   {
     icon: <Bot size={40} />,
     title: "AI Agent",
     description:
       "Your intelligent assistant providing insights, recommendations, and automations.",
+    fileUrl: "/documents/ai-agent.pdf"
   },
 ];
 
@@ -47,9 +51,9 @@ export default function ProjectScope() {
               <div className={styles.cardIcon}>{item.icon}</div>
               <h3 className={styles.cardTitle}>{item.title}</h3>
               <p className={styles.cardDesc}>{item.description}</p>
-              <a href="#" className={styles.learnMore}>
+              <a href={item.fileUrl} download className={styles.learnMore}>
                 Learn more
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
               </a>
               <div className={styles.cardLine} />
             </div>

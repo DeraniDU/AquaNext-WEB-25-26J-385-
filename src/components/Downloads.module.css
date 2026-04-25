@@ -122,3 +122,19 @@
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
+
+.pendingBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.375rem;
+  background: var(--gray-200);
+  color: var(--gray-500);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: not-allowed;
+  margin-top: auto;
+  align-self: flex-start;
+}
