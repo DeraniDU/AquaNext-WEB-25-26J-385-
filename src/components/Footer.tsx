@@ -11,7 +11,7 @@ export default function Footer() {
             <span className={styles.logoText}>Aqua<span className={styles.logoAccent}>Next</span></span>
           </div>
           <p className={styles.brandDesc}>
-            AI-Driven Smart Shrimp Farming — A SLIIT research project advancing 
+            AI-Powered Smart Aquaculture — A SLIIT research project advancing 
             sustainable aquaculture through artificial intelligence and IoT technologies.
           </p>
         </div>
@@ -33,7 +33,7 @@ export default function Footer() {
 
       <div className={styles.bottom}>
         <div className={`container ${styles.bottomContent}`}>
-          <p>&copy; {new Date().getFullYear()} AquaNext Research. Sri Lanka Institute of Information Technology.</p>
+          <p>&copy; {new Date().getFullYear()} AquaNext Project. Sri Lanka Institute of Information Technology.</p>
           <p className={styles.bottomRight}>Department of Information Technology</p>
         </div>
       </div>
