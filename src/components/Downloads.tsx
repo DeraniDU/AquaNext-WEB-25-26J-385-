@@ -1,65 +1,43 @@
 import styles from "./Downloads.module.css";
-import { 
-  FileText, 
-  ClipboardList, 
-  BookOpen, 
-  BarChart, 
-  TrendingUp, 
-  Newspaper, 
-  Book, 
+import {
+  FileText,
+  ClipboardList,
+  BookOpen,
+  BarChart,
+  TrendingUp,
+  Newspaper,
+  Book,
   MonitorPlay,
   Download
 } from "lucide-react";
 
 const downloads = [
   {
-    icon: <FileText size={24} />,
-    title: "Topic Assessment",
-    description: "Initial project topic assessment form submitted during the project registration phase.",
-    type: "PDF Document",
-    group: "Individual",
-  },
-  {
-    icon: <ClipboardList size={24} />,
-    title: "Project Charter",
-    description: "Comprehensive project charter outlining scope, objectives, deliverables, and timeline.",
-    type: "PDF Document",
-    group: "Group",
-  },
-  {
     icon: <BookOpen size={24} />,
     title: "Project Proposal",
     description: "Detailed research proposal with literature review, methodology, and expected outcomes.",
-    type: "PDF Presentations",
-    group: "Individual",
+    type: "PDF Document",
+    group: "Group",
+    fileUrl: "/documents/AquaNext Project Proposal_compressed.pdf",
+    status: "Completed",
   },
   {
     icon: <BarChart size={24} />,
-    title: "Status Document I",
-    description: "First status document reflecting 50% progress — containing data analysis and initial results.",
-    type: "PDF Document",
-    group: "Individual",
+    title: "Progress Presentation 1",
+    description: "First progress presentation covering initial research findings and 50% milestone updates.",
+    type: "PPTX / PDF",
+    group: "Group",
+    fileUrl: "/documents/AquaNext Progress Presentation 1_compressed.pdf",
+    status: "Completed",
   },
   {
     icon: <TrendingUp size={24} />,
-    title: "Status Document II",
-    description: "Second status document with 90% completion — model evaluations and system integration status.",
-    type: "PDF Document",
-    group: "Individual",
-  },
-  {
-    icon: <Newspaper size={24} />,
-    title: "Research Paper",
-    description: "Published research paper detailing novel contributions, experiments, and findings.",
-    type: "PDF / IEEE Format",
+    title: "Progress Presentation 2",
+    description: "Second progress presentation covering advanced implementations and 90% milestone updates.",
+    type: "PPTX / PDF",
     group: "Group",
-  },
-  {
-    icon: <Book size={24} />,
-    title: "Final Report",
-    description: "Complete academic final report covering all aspects of the research and implementation.",
-    type: "PDF Document",
-    group: "Individual",
+    fileUrl: "/documents/AquaNext Progress Presentation 2.pdf",
+    status: "Completed",
   },
   {
     icon: <MonitorPlay size={24} />,
@@ -67,6 +45,8 @@ const downloads = [
     description: "Viva voce presentation slides for the final academic evaluation and defense.",
     type: "PPTX / PDF",
     group: "Group",
+    fileUrl: "/documents/final-presentation.pdf",
+    status: "Not completed yet",
   },
 ];
 
@@ -96,10 +76,16 @@ export default function Downloads() {
                 <h3 className={styles.cardTitle}>{item.title}</h3>
                 <p className={styles.cardDesc}>{item.description}</p>
               </div>
-              <button className={styles.downloadBtn}>
-                <Download size={16} />
-                Download
-              </button>
+              {item.status === 'Completed' ? (
+                <a href={item.fileUrl} download className={styles.downloadBtn}>
+                  <Download size={16} />
+                  Download
+                </a>
+              ) : (
+                <span className={styles.pendingBtn}>
+                  Pending
+                </span>
+              )}
             </div>
           ))}
         </div>

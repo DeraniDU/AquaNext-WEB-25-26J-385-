@@ -6,24 +6,28 @@ const teamMembers = [
     role: "BSc (Hons) IT – SLIIT Malabe",
     email: "deranindu@gmail.com",
     phone: "+94 71 123 4567",
+    image: "/images/team/deranindu.jpg",
   },
   {
     name: "Samadi Senavirathne",
     role: "BSc (Hons) IT – SLIIT Malabe",
     email: "jithmisamadi2001@gmail.com",
     phone: "+94 77 345 6789",
+    image: "/images/team/samadi.jpg",
   },
   {
     name: "Piyumali Palihawadana",
     role: "BSc (Hons) IT – SLIIT Malabe",
     email: "piyumalipalihawadana@gmail.com",
     phone: "+94 77 456 7890",
+    image: "/images/team/piyumali.jpg",
   },
   {
     name: "Raveen De Silva",
     role: "BSc (Hons) IT – SLIIT Malabe",
     email: "rdesilva614@gmail.com",
     phone: "+94 71 234 5678",
+    image: "/images/team/raveen.jpg",
   },
 ];
 
@@ -114,10 +118,14 @@ export default function AboutUs() {
             {teamMembers.map((m) => (
               <div key={m.name} className={styles.teamCard}>
                 <div className={styles.teamAvatar}>
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                    <circle cx="12" cy="7" r="4"/>
-                  </svg>
+                  {m.image ? (
+                    <img src={m.image} alt={m.name} className={styles.avatarImg} />
+                  ) : (
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  )}
                 </div>
                 <div className={styles.teamInfo}>
                   <h4 className={styles.teamName}>{m.name}</h4>

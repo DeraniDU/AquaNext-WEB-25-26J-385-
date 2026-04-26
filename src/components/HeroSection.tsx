@@ -4,11 +4,14 @@ import { Microscope } from "lucide-react";
 export default function HeroSection() {
   return (
     <section id="home" className={styles.hero}>
+      {/* Grid overlay */}
+      <div className={styles.grid} />
       {/* Decorative floating shapes */}
       <div className={styles.shapes}>
         <div className={styles.shape1} />
         <div className={styles.shape2} />
         <div className={styles.shape3} />
+        <div className={styles.shape4} />
       </div>
 
       <div className={`container ${styles.content}`}>
