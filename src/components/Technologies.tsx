@@ -68,7 +68,7 @@ export default function Technologies() {
         <div className={styles.grid}>
           {technologies.map((tech) => (
             <div key={tech.name} className={styles.card}>
-              <span className={styles.icon}>{tech.icon}</span>
+              <div className={styles.iconWrapper}>{tech.icon}</div>
               <h4 className={styles.name}>{tech.name}</h4>
               <span
                 className={styles.badge}
