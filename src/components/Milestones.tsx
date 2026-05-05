@@ -2,28 +2,28 @@ import styles from "./Milestones.module.css";
 
 const milestones = [
   {
-    date: "February 2025",
+    date: "July 2025",
     title: "Project Proposal",
     description: "Initial proposal presentation including research problem identification, literature review, and proposed AI-driven solution architecture.",
     status: "completed" as "completed" | "in-progress" | "upcoming",
     marks: "Proposal Evaluation",
   },
   {
-    date: "May 2025",
+    date: "January 2026",
     title: "Progress Presentation 1",
     description: "Demonstration of 50% project completion — data collection, initial model training, and prototype system architecture.",
     status: "completed" as "completed" | "in-progress" | "upcoming",
     marks: "Progress Review",
   },
   {
-    date: "September 2025",
+    date: "March 2026",
     title: "Progress Presentation 2",
     description: "Demonstration of 90% project completion — refined models, system integration, and preliminary testing results.",
     status: "completed" as "completed" | "in-progress" | "upcoming",
     marks: "Progress Review",
   },
   {
-    date: "November 2025",
+    date: "May 2026",
     title: "Final Presentation",
     description: "Complete project demonstration, viva voce examination, and final evaluation by academic panel and industry experts.",
     status: "upcoming" as "completed" | "in-progress" | "upcoming",
