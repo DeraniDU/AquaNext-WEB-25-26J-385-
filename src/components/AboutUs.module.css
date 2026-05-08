@@ -180,8 +180,8 @@
 }
 
 .avatarPlaceholder {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--blue-100), var(--blue-200));
   display: flex;
@@ -190,6 +190,8 @@
   margin-bottom: 1.25rem;
   color: var(--blue-600);
   box-shadow: 0 4px 16px rgba(37, 99, 235, 0.15);
+  overflow: hidden;
+  border: 3px solid var(--blue-100);
 }
 
 .memberName {
