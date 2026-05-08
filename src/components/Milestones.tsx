@@ -26,8 +26,15 @@ const milestones = [
     date: "May 2026",
     title: "Final Presentation",
     description: "Complete project demonstration, viva voce examination, and final evaluation by academic panel and industry experts.",
-    status: "upcoming" as "completed" | "in-progress" | "upcoming",
+    status: "completed" as "completed" | "in-progress" | "upcoming",
     marks: "Final Viva",
+  },
+  {
+    date: "May 2026",
+    title: "Research Conference Presentation",
+    description: "Presentation of AquaNext research findings at ICHORA 2026 — International Conference on Humanities, Social Sciences, and Technology — showcasing AI-driven aquaculture innovation to an academic and industry audience.",
+    status: "upcoming" as "completed" | "in-progress" | "upcoming",
+    marks: "ICHORA 2026",
   },
 ];
 
